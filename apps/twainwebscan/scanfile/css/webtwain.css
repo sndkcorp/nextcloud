@@ -1,0 +1,38 @@
+#dialog-form{
+	font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+}
+.input-group {
+    padding: 5px 10px;
+}
+input#txtscanfile,select#devicelist {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+input[type="button"]{
+	padding: 5px 20px;
+    background: #3c8dbc;
+    color: #fff;
+    border-color: #3c8dbc;
+    float: right;
+}
+
+.btn {
+	display: inline-block;
+    margin-bottom: 0px;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border-style: solid;
+    border-radius: 4px;
+}
+#load {
+    width: 100%;
+    height:100%;
+    position: fixed;
+    z-index:9999;
+    background: url("../Resources/reference/loading.gif") no-repeat center center rgba(0,0,0,0.25);
+    margin-left: -8px;
+}

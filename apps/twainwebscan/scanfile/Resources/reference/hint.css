@@ -1,0 +1,231 @@
+
+.ks-dialog,.ks-popup {
+    background-color: #FBFBFB;
+    border: 1px solid #ACB4BE
+}
+
+.ks-overlay {
+    position: absolute;
+    left: -9999px;
+    top: -9999px
+}
+
+.ks-dialog,.ks-overlay {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    outline: 0;
+    z-index: 9998;
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+}
+
+.ks-dialog-hidden {
+    visibility: hidden
+}
+
+.ks-dialog-focused,.ks-overlay-focused {
+    z-index: 9999
+}
+
+.ks-overlay-hidden {
+    visibility: hidden
+}
+
+.ks-overlay-mask-hidden {
+    display: none
+}
+
+.ks-overlay-shown {
+    visibility: visible
+}
+
+.ks-overlay-mask-shown {
+    display: block
+}
+
+.ks-overlay-mask,.ks-dialog-mask {
+    background-color: #000000;
+    opacity: 0.3;
+    z-index: 9998
+}
+
+.ks-ext-close {
+    padding: 0 20px;
+    position: absolute;
+    right: -5px;
+    top: 5px
+}
+
+.ks-ext-close,.ks-ext-close:link {
+    color: #2222AA;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.ks-ext-mask {
+    background: #999999;
+    opacity: 0.7
+}
+
+.thumbContainer > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.thumb {
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    padding: 0;
+    margin: 0;
+    border: solid 1px #BABABA;
+    box-sizing: border-box;
+}
+
+.thumb:hover {
+	border: solid 1px #B8D6FB;
+}
+
+.thumb .imgwrap {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	line-height: 0;
+}
+
+.thumb img {
+	z-index: 0;
+	padding: 0;
+	margin: 0;
+}
+/*numbers*/
+.thumb div {
+	z-index: 20;
+	background-color: #FFFFFF;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.thumb div:last-child {
+	border: solid 1px #B8D6FB;
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+	color: #98A6CB;
+}
+
+.thumb:hover div:first-child {
+	background-color: #ECF3FD;
+}
+
+.thumb:hover div:last-child {
+	margin: 0 auto;
+	padding: 0;
+	color: #FFFFFF;
+	background: #B8D6FB;
+}
+
+.thumb.D-ImageUI-selected {
+	border: solid 1px #7DA2CE;
+}
+
+.thumb.D-ImageUI-selected:hover {
+	border: solid 1px #7DA2CE;
+}
+
+.thumb.D-ImageUI-selected div:first-child {
+	background-color: #DBEAFC;
+}
+
+.thumb.D-ImageUI-selected div:last-child {
+	background: #7DA2CE;
+	color: #FFFFFF;
+}
+
+.D-SourceListDiv {
+    position: absolute;
+    padding: 5px;
+    background-color: #FFF;
+    border: solid 3px #fe8e14;
+    left: 350px;
+    top: 200px;
+    z-index: 300;
+    display: none;
+}
+
+.D-SourceListDiv > ul {
+	cursor: pointer;
+	list-style: none;
+	padding: 3px;
+	margin-bottom: 5px;
+	font-weight: 300;
+	font-family: Calibri;
+}
+
+.D-SourceListDiv > ul > li {
+	padding: 2px;
+	border: 1px solid #FFF;
+}
+
+.D-SourceListDiv > ul > li:hover {
+	background-color: #CCC;
+}
+
+.D-SourceListDiv .D-SelectedSourceItem {
+	border: 1px solid #fe8e14;
+}
+
+.D-SourceSelectBtn {
+    width: 80px;
+    margin: 0 10px 10px 10px;
+    padding-top: 0;
+}
+
+.D-ShowDialog {
+    display: block;
+}
+
+.allowOverFlowX {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.allowOverFlow {
+    overflow: auto;
+}
+
+.allowOverFlowY {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.floatRight {
+    float: right;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.imgBox {
+	display: table-cell;
+	vertical-align:middle;
+	text-align:center;
+}
+
+.imgBox img {
+	vertical-align:middle;
+}
+
+.relativePositioning {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 1000;
+}
+.ds-dwt-editorCover{
+    position: absolute;
+    z-index: 1;
+}

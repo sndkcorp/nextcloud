@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<info>
+    <id>twainwebscan</id>
+    <name>Twain Web Scan</name>
+    <description>Twain Web Scan for scan and upload to nextcloud directory</description>
+    <version>1.0.0</version>
+    <licence>AGPL</licence>
+    <author>Vj</author>
+    <category>apps</category>
+    <website>https://github.com/vijaydwivedics</website>
+    <repository>https://github.com/vijaydwivedics</repository>
+    <bugs>https://github.com/vijaydwivedics/issues</bugs>
+    <documentation>https://github.com/vijaydwivedics</documentation>
+    <screenshot>https://github.com/e-alfred/flowupload/raw/master/appinfo/flowupload.gif</screenshot>
+    <dependencies>
+        <nextcloud min-version="13" max-version="14"/>
+    </dependencies>
+</info>

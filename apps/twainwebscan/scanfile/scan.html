@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Scan, Load, Upload | Dynamic Web TWAIN</title>
+    <meta http-equiv="description" content="The sample" />
+    <script src="Resources/dynamsoft.webtwain.config.js"></script>
+    <script src="Resources/dynamsoft.webtwain.initiate.js"></script>
+	<link rel="stylesheet" href="Style/webtwain.css">
+	<script>
+	document.onreadystatechange = function () {
+	  var state = document.readyState
+	  if (state == 'complete') {
+		  setTimeout(function(){
+			  document.getElementById('interactive');
+			 document.getElementById('load').style.visibility="hidden";
+		  },1000);
+	  }
+	}
+	</script>
+</head>
+
+<body>
+	<div id="load"></div>
+    <div id="main">
+        <div class="container">
+            <div class="ct-lt clearfix" style="display:none">
+                <div id="dwtcontrolContainer"></div>
+            </div>
+            <div class="ct-rt">
+                <div class="content clearfix">
+                    <div class="section">
+						<div id="dialog-form" class="oc-dialog-content">
+							<div class="col-lg-12">
+								<div class="input-group mt10"> 
+									<span class="input-group-addon text-maroon text-bold"> Select Device</span> 
+									<select name="devicelist" id="devicelist"><option>Select</option></select>
+								</div> 
+								<div class="input-group mt10"> 
+									<span class="input-group-addon text-maroon text-bold"> Name of File</span> 
+									<input type="text" id="txtscanfile" class="form-control" value="" placeholder="Enter the Name of File"> 
+								</div> 
+								<div class="input-group mt10">
+									<label id="Label1"> 
+										<input type="radio" name="scantype" id="RdbBW" checked="checked" value="0"> BW 
+									</label>
+									<label id="Label2">
+										<input type="radio" name="scantype" id="Rdbgrayscale" value="1"> GrayScale
+									</label>  
+									<label id="Label3"> 
+										<input type="radio" name="scantype" id="RdbColor" value="2"> Color
+									</label> 
+								</div>
+								<div class="input-group mt10"> 
+									<label id="Label4">
+										<input type="radio" name="scanside" id="RdbSingle" checked="checked" value="0"> Single Side
+									</label>
+									<label id="Label5"> 
+										<input type="radio" name="scanside" id="RdbDup" value="1"> Duplex
+									</label> 
+								</div>
+								<div class="input-group mt10 radioGroup">
+									Upload file format:
+									<label for="jpeg" style="margin-right: 12px;">
+										<input type="radio" value="png" name="ImageType" id="jpeg" checked="checked" /> PNG
+									</label>
+									<label for="pdf">
+										<input type="radio" value="pdf" name="ImageType" id="pdf" /> PDF
+									</label>
+									<!--<label for="tiff" style="margin-right: 12px;">
+										<input type="radio" value="tif" name="ImageType" id="tiff" /> TIF
+									</label>-->
+								</div>
+							</div>
+						</div>
+						<input type="button" value="Scan" onclick="AcquireImage();" class="btn mr20" />
+                    </div>
+                    
+                    
+					<div class="section" style="width:100%; float:left;display:none">
+                        <div>Uploaded Files</div>
+                        <div id="resultWrap">
+                            <table id='div-uploadedFile'>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+	<script>
+	var dt = new Date();
+	var monthNames = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+	var fileName = "scan_" + dt.getDate() + monthNames[dt.getMonth()] +""+ dt.getFullYear() +""+ dt.getHours() + "" + dt.getMinutes() + "" + dt.getSeconds();
+	document.getElementById('txtscanfile').value = fileName;
+	</script>
+    <script src="Scripts/script.js"></script>
+</body>
+
+</html>

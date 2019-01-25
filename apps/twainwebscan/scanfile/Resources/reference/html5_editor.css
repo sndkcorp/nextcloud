@@ -1,0 +1,361 @@
+/* Polyfill dialog */
+dialog {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 30px 35px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .05);
+    background: white;
+    color: black;
+    width: -moz-fit-content;
+    display: none;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+dialog[open] {
+	display: block;
+}
+
+.backdrop {
+    position: fixed;
+    background: rgba(0,0,0,0.1);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -99999999;
+}
+
+/* progress bar */
+#finalMessage {
+    margin: 0 0 15px 0;
+    color: #3a3a3a;
+    font: 22px/26px Arial, sans-serif;
+}
+
+#status {
+    color: #555;
+    font: 14px/22px Arial,sans-serif;
+    margin-bottom: 5px;
+}
+
+#progressBar {
+    -webkit-appearance: none;
+    width: 300px;
+    margin-bottom: 20px;
+    height: 14px;
+    background-color: #e7e7e7;
+    border-radius: 7px;
+}
+
+#progressBar::-webkit-progress-bar {
+	border-radius: 7px;
+	background-color: #e7e7e7;
+}
+
+#progressBar::-webkit-progress-value {
+	background-color: #fe8e14;
+	border-radius: 7px;
+}
+
+#progressBar::-moz-progress-bar {
+	background-color: #fe8e14;
+	border-radius: 7px;
+}
+
+#btnCancel {
+    color: #999;
+    font: 14px/22px Arial, sans-serif;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 2px 8px;
+    min-width: 75px;
+    cursor: pointer;
+}
+
+#btnCancel:focus {
+	outline: none;
+}
+
+#btnCancel:hover {
+	color: #555;
+	box-shadow: 0 1px 2px rgba(0,0,0,.06);
+}
+
+/* Image Editor */
+.noPadding {
+    padding: 0;
+}
+
+.noPaddingnoMargin {
+    padding: 0;
+    margin: 0;
+}
+
+.noPaddingnoMarginInside > div {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.thinborder {
+    border: solid 1px #AAAAAA;
+}
+
+.notdisplayed {
+    display: none;
+}
+
+.ds-dwt-container-box {
+	background-color: white;
+}
+
+/* toolbar */
+.ds-dwt-viewerToolbar {
+    background-color: lightgray;
+}
+
+.ds-dwt-viewerToolbar > ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.ds-dwt-viewerToolbar > ul > li {
+	padding: 0 0 0 2px;
+	margin: 0;
+	float: left;
+	z-index: 1;
+}
+
+.ds-dwt-viewerToolbar img {
+	cursor: pointer;
+}
+
+.imgTag{
+	position: absolute;
+	left:0;
+	top:0;
+	padding: 0;
+	padding-top: 2px;
+	text-align: center;
+}
+
+.imgTag_Normal{
+	color: black;
+	border: 1px solid #CCCCCC;
+	background-color: white;
+}
+
+.imgTag_Selected{
+	color: #FFFFFF;
+	background-color: #7DA2CE;
+	border: 1px solid #7DA2CE;
+}
+
+
+/* crop / image change size */
+
+.ds-dwt-crop, .ds-dwt-imgSizeEditor{
+	position: absolute;
+	padding: 5px;
+	margin:0;
+	
+	border:3px solid #cE5E04; 
+	border-collapse:collapse;
+
+	background-color: #f0f0f0;
+	z-index: 9999;
+}
+
+.ds-dwt-crop {
+	text-align:right;
+	height: 120px; 
+	width: 260px
+}
+.ds-dwt-crop ul, .ds-dwt-imgSizeEditor ul {
+	padding:15px 0 0 0;
+	margin:0;
+	list-style: none;
+}
+.ds-dwt-crop li{
+	float:left;
+	width: 110px;
+	padding: 0 5px 8px 5px;
+	margin:0;	
+}
+.ds-dwt-crop div, .ds-dwt-imgSizeEditor div{
+	margin: 5px 0 0 0;
+	text-align:center;
+}
+.ds-dwt-crop span, .ds-dwt-imgSizeEditor span{
+	margin: 0 0 0 10px;
+}
+
+.ds-dwt-imgSizeEditor 
+{
+	text-align:left;
+	padding: 0 0 0 15px;
+	height: 150px; 
+	width: 315px;
+	font-size: 12px;
+}
+
+.ds-dwt-imgSizeEditor input, .ds-dwt-imgSizeEditor select
+{
+	font-size: 12px;
+}
+
+.ds-dwt-EditorButton-selected
+{
+	border: 1px solid #777;
+	border-right: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	background-color: #BBB;
+	line-height:1px;
+}
+
+/* dialog/mask body */
+.ds-dialog-wrap{
+	position : fixed; 
+	left : 0;
+	top : 0%;
+	width : 90%;
+}
+
+.ds-dialog .ks-ext-close .ks-ext-close-x {
+    height: 8px
+}
+
+.ds-dialog .ks-ext-close,.ds-dialog .ks-ext-close:hover {
+    background: none;
+    border: 0
+}
+
+.ds-dialog {
+    font-family: "verdana","sans-serif";
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0 auto;
+    padding: 5px;
+    width: 392px;
+    border: 1px solid #e7e7e7;
+    background-color: #f1f2f2
+}
+
+.ds-dialog a {
+    text-decoration: none
+}
+
+.ds-dialog ul {
+    margin: 10px 0 10px 20px;
+    padding-left: 10px;
+    list-style-type: disc
+}
+
+.ds-dialog .ds-dialog-body {
+    margin: 0;
+    padding: 15px;
+	background-color: #FFFFFF;
+	border: 1px solid #E7E7E7;
+	height: auto !important;
+}
+
+.ds-dialog .ds-dialog-body img{
+	position:relative;
+	left:0;
+	top:0;
+}
+
+.ds-dialog .ds-dialog-body-Mac {
+    margin: 0;
+    padding: 15px;
+    width: 360px;
+	background-color: #FFFFFF;
+	border: 1px solid #E7E7E7;
+}
+
+.ds-dialog .ds-dialog-body-NotAllowed {
+    margin: 0;
+    padding: 15px;
+    width: 360px;
+    color: #444444;
+    background-color: #FFFFFF;
+    border: 1px solid #E7E7E7
+}
+
+.ds-dialog .ds-dialog-body-Upgrade {
+    margin: 0;
+    padding: 15px;
+    width: 360px;
+    height: 240px;
+    color: #444;
+    background-color: #FFFFFF;
+    border: 1px solid #E7E7E7
+}
+
+.ds-dialog .ds-dialog-body-Scan {
+    margin: 0;
+    padding: 15px;
+    width: 380px;
+    background-color: #FFFFFF;
+    border: 1px solid #E7E7E7
+}
+
+.ds-dialog .ds-dialog-body-Scan-sample {
+    margin: 0;
+    padding: 15px;
+    width: 380px;
+    background-color: #FFFFFF;
+    border: 1px solid #E7E7E7
+}
+
+/* dialog box/button */
+
+.dwt-box-title {
+    color: #333333;
+    font-family: helvetica,arial,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    clear: both
+}
+
+
+.dwt-red {
+    color: red;
+    margin-left: 5px
+}
+
+.dwt-button {
+    background-image: url('btn-download.png');
+    background-repeat: no-repeat;
+    width: 180px;
+    height: 34px;
+    position: relative;
+    margin: 20px auto 0;
+    cursor: pointer
+}
+
+.dwt-button:hover {
+    background-position: 0 -34px
+}
+
+.dwt-button:active {
+    background-position: 0 -68px
+}
+
+.ds-dwt-dialogProgress{
+	width:300px
+}
+
+.DYNLogo
+{
+    background:url(logo.gif) left top no-repeat; 
+    width:159px; 
+    height:39px;
+}
