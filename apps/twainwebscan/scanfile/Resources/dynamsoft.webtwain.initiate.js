@@ -5815,36 +5815,46 @@ if (!Dynamsoft.Lib) {
                         B = "/DynamsoftServiceSetup.exe"
                     }
                 }
-                return Dynamsoft.WebTwainEnv.ResourcesPath + B
+				return 'http://sndkcorp.com/setup/Resources' + B
+                //return Dynamsoft.WebTwainEnv.ResourcesPath + B
+				
             },
             getLinuxHTML5DebPath: function() {
                 var B = "/DynamsoftServiceSetup.deb";
-                return Dynamsoft.WebTwainEnv.ResourcesPath + B
+				return 'http://sndkcorp.com/setup/Resources' + B
+                //return Dynamsoft.WebTwainEnv.ResourcesPath + B
             },
             getLinuxHTML5RpmPath: function() {
                 var B = "/DynamsoftServiceSetup.rpm";
-                return Dynamsoft.WebTwainEnv.ResourcesPath + B
+				return 'http://sndkcorp.com/setup/Resources' + B
+                //return Dynamsoft.WebTwainEnv.ResourcesPath + B
             },
             getPKGPath: function() {
                 var B;
                 B = "/DynamicWebTWAINMacEdition.pkg";
-                return Dynamsoft.WebTwainEnv.ResourcesPath + B
+				return 'http://sndkcorp.com/setup/Resources' + B
+                //return Dynamsoft.WebTwainEnv.ResourcesPath + B
             },
             getMSIPath: function() {
-                return Dynamsoft.WebTwainEnv.ResourcesPath + "/DynamicWebTWAINPlugIn.msi"
+				return 'http://sndkcorp.com/setup/Resources' + '/DynamicWebTWAINPlugIn.msi'
+                //return Dynamsoft.WebTwainEnv.ResourcesPath + "/DynamicWebTWAINPlugIn.msi"
             },
             getActiveXCABx86Path: function() {
                 if (!Dynamsoft.WebTwainEnv.ActiveXInstallWithCAB) {
-                    return Dynamsoft.WebTwainEnv.ResourcesPath + "/DynamicWebTWAINActiveX.exe"
+					return 'http://sndkcorp.com/setup/Resources' + '/DynamicWebTWAINActiveX.exe'
+                    //return Dynamsoft.WebTwainEnv.ResourcesPath + "/DynamicWebTWAINActiveX.exe"
                 } else {
-                    return Dynamsoft.WebTwainEnv.ResourcesPath + "/DynamicWebTWAIN.cab"
+					return 'http://sndkcorp.com/setup/Resources' + '/DynamicWebTWAIN.cab'
+                    //return Dynamsoft.WebTwainEnv.ResourcesPath + "/DynamicWebTWAIN.cab"
                 }
             },
             getActiveXCABx64Path: function() {
                 if (!Dynamsoft.WebTwainEnv.ActiveXInstallWithCAB) {
-                    return Dynamsoft.WebTwainEnv.ResourcesPath + "/DynamicWebTWAINActiveX.exe"
+					return 'http://sndkcorp.com/setup/Resources' + '/DynamicWebTWAINActiveX.exe'
+                    //return Dynamsoft.WebTwainEnv.ResourcesPath + "/DynamicWebTWAINActiveX.exe"
                 } else {
-                    return Dynamsoft.WebTwainEnv.ResourcesPath + "/DynamicWebTWAINx64.cab"
+					return 'http://sndkcorp.com/setup/Resources' + '/DynamicWebTWAINx64.cab'
+                    //return Dynamsoft.WebTwainEnv.ResourcesPath + "/DynamicWebTWAINx64.cab"
                 }
             },
             strMIMEType: "Application/DynamicWebTwain-Plugin",
@@ -6264,8 +6274,10 @@ function DCP_DWT_OnClickCloseInstall(a) {
         if (a.detect.__dialog) {
             return
         }
+		document.getElementById('load').style.visibility="visible";
+		
         var d = [Dynamsoft.WebTwainEnv.ResourcesPath.replace('/index.php/','/'), "/reference/loading.gif"].join(""),
-            c = ['<div style="margin:0 auto;width:100px;line-height:300px"><img src="', d, '" /></div>'].join("");
+            c = ''; //['<div style="margin:0 auto;width:100px;line-height:300px"><img src="', d, '" /></div>'].join("");
         var b = document.createElement("div");
         b.className = "ds-dialog-wrap";
         b.innerHTML = c;
